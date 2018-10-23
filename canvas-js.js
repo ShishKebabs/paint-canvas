@@ -1,4 +1,4 @@
-var canvas = document.getElementById('myCanvas');
+var canvas = document.getElementById('art-canvas');
 var context = canvas.getContext('2d');
 
 
@@ -82,12 +82,6 @@ function canvasDraw() { //https://phpacademy.org/topics/html5-canvas-drawing-app
 	context.fillRect(0,0,800,500);
 	}
 	
-	
-	
-	
-	
-	
-
 function addTitle(){
     clearListeners();
     canvas.addEventListener('mousedown', getPositionText);
@@ -150,6 +144,7 @@ function speechBubble() {
     clearListeners();
     canvas.addEventListener('mousedown', getPositionSpeechBubble);
 }
+
 var getPositionSpeechBubble = function(speechBubble){
       // draw shape
         context.translate(speechBubble.offsetX, speechBubble.offsetY);
@@ -171,14 +166,6 @@ var getPositionSpeechBubble = function(speechBubble){
         clearListeners();
 }
 
-
-
-
-
-
-
-
-
 function clearListeners() { // stop a function when another is being used
     canvas.removeEventListener('mousedown', getPositionCircle);
     canvas.removeEventListener('mousedown', getPositionRectangle);
@@ -189,16 +176,6 @@ function clearListeners() { // stop a function when another is being used
     canvas.removeEventListener('mousedown', getPositionSpeechBubble);
 }
 
-
-
-
-
-
-
-
-
-
-
 var clear = document.getElementById("clear");
 	clear.addEventListener('click', clearImage);
 	function clearImage (){
@@ -206,12 +183,6 @@ var clear = document.getElementById("clear");
 context.canvas.height);
 }
     
-
-
-
-
-
-
 var saveButton = document.getElementById("save")
 saveButton.addEventListener('click', saveImage);
 function saveImage(){
@@ -219,24 +190,6 @@ function saveImage(){
     window.open(data, '_blank', 'location=0, menubar=0');
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function imageUrlFunc() {
 		let image = new Image();
@@ -246,12 +199,7 @@ function imageUrlFunc() {
         context.drawImage(image,0,0,800,500);
       }
 }
-	  
-	  
-	  
-	  
-	  
-	  
+	  	  
 function imageSelectorFunc (option) {
     var img=document.getElementById(option);
     context.drawImage(img,0,0,800,500);
