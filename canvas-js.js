@@ -107,14 +107,7 @@ function addTitle(){
         clearListeners();
 
     }
-    
-	
-	
-	
-	
-	
-	
-	
+    	
 function circle(){
     clearListeners();
     canvas.addEventListener('mousedown', getPositionCircle);
