@@ -1,0 +1,135 @@
+* {	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+	background-color: #D3D3D3;
+    margin: 0;
+    color: #F0FFFF;
+
+}
+
+#overallDiv
+{
+	width: 70%;
+	margin: auto;
+	text-align: center;	
+}          
+
+#header{
+	position: relative;
+	margin-top: -3%;
+	text-align: center;	
+	background-color: #4682B4;
+	font-size: 36px;
+}
+.Menu {
+    margin: auto;
+    padding: 10px;
+    margin-top: 5px;
+    display: block;
+    width: 90px;
+}
+
+#topbar {
+    width: 100%;        
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 50px;
+    padding: 10px;
+    clear: both;
+}
+#url{
+	height: 30px;
+	width: 20%;
+    clear:both;
+}
+#upload {
+    width: 10%;
+	height: 30px;
+	font-size: 16px;
+    clear: both;
+}
+
+#middleDiv {
+        margin-top: 5px;
+	   border-radius: 5px;
+	   height: 100%;
+        width: 100%;
+	   padding: 10px;
+        margin: auto;
+}
+#contentLeftSide
+{
+    float: left;
+	background-color: white;
+	border-radius: 5px;
+	width: 10%;
+	padding: 15px;
+    background-color: #4682B4;
+}
+.radiusControl{
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	background-color: #696969;
+	color: white;
+	display: inline-block;
+}
+#myCanvas {
+    float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	background-color: white;
+    border: 1px solid black;
+}
+#contentRightSide
+{	
+    float: left;
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	height: 500px;
+	width: 10%;
+    background-color: #4682B4;
+
+}
+
+
+#footer{
+    margin: auto;
+	padding: 10px;
+	clear: both;
+	background-color: white;
+	border-radius: 5px;
+	height: 100px;
+	width: 20%;
+    background-color: #4682B4;
+
+}
+
+.footerMenu{
+    height: 30px;
+    padding: 8px;
+    background-color: #696969;
+    margin-top: 7px;
+}
+
+img 
+{
+	width: 160px;
+	height: 100px;
+}   
+#samples {
+	position: absolute;
+	top: 15%;
+	left: 0%;
+}
