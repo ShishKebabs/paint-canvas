@@ -221,11 +221,9 @@ context.canvas.height);
 
 var saveButton = document.getElementById("save")
 saveButton.addEventListener('click', saveImage);
-	function saveImage(){
-
-		var data = canvas.toDataURL();
-
-		window.open(data, '_blank', 'location=0, menubar=0');
+function saveImage(){
+	var data = canvas.toDataURL();
+    window.open(data, '_blank', 'location=0, menubar=0');
 
 }
 
@@ -248,13 +246,13 @@ saveButton.addEventListener('click', saveImage);
 
 
 function imageUrlFunc() {
-		var image = new Image();
-		var source = document.getElementById("url").value;
+		let image = new Image();
+		let source = document.getElementById("url").value;
 		image.src = source;
 		image.onload = function() {
         context.drawImage(image,0,0,800,500);
       }
-	  }
+}
 	  
 	  
 	  
@@ -262,33 +260,6 @@ function imageUrlFunc() {
 	  
 	  
 function imageSelectorFunc (option) {
-switch (option)
-{
-
-case "Image 1":
-	var img=document.getElementById("Image 1");
-	context.drawImage(img,0,0,800,500);
-
-break;
-case "Image 2":
-	var img=document.getElementById("Image 2");
-	context.drawImage(img,0,0,800,500);
-
-break;
-case "Image 3":
-	var img=document.getElementById("Image 3");
-	context.drawImage(img,0,0,800,500);
-
-break;
-case "Image 4":
-	var img=document.getElementById("Image 4");
-	context.drawImage(img,0,0,800,500);
-	
-break;
-
-case "Image 5":
-	var img=document.getElementById("Image 5");
-	context.drawImage(img,0,0,800,500);
-break;
-}
+    var img=document.getElementById(option);
+    context.drawImage(img,0,0,800,500);
 }

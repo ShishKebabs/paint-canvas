@@ -3,129 +3,116 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <link rel="stylesheet" type="text/css" href="websitecss.css">
-
+<script defer src="canvas-js.js"></script>
 </head>
 
-
 <body>
-<header> 
-<div id="header">
-<h1> QuikEdit beta </h1>
+	<header> 
+		<div id="header">
+		<h1> QuikEdit beta </h1>
+		</div>
+	</header>
 
-</div>
-</header>
-
-<div id="overallDiv">
-
-
-
-<div id="topBar">
-
-<div id="imageUrl">
-<input id = "url" type="url" class="imageUpload"/>
-<input type="button" id="upload" value="Upload" 
-onclick="imageUrlFunc()"/></button>
-
-</div>
-</div>
+	<div id="top-bar">
+		<div id="imageUrl">
+		<input id = "url" type="url" class="imageUpload"/>
+		<input type="button" id="upload" value="Upload" onclick="imageUrlFunc()"/></button>
+		</div>
+	</div>
 
 
-<div id="middleDiv">
-<div id="contentLeftSide">
-<input type="button" class="Menu" id="canvasDrawOption" value="Free Draw" 
-onclick ="canvasDraw()"/>
-<br>
-<div id="rad">
-Line Width: <span id="radiusValue">10</span>
-<div id="decRadius" class ="radiusControl">-</div>
-<div id="incRadius" class ="radiusControl">+</div>
-</div>
-<br>
-Canvas Colour:
-<input id="colorCanvas" value="#FFFFFF" type="color" class="Colours" 
-onchange="canvasColour()"/>
-</div>
+	<div id="middle-div">
+		<div id="contentLeftSide">
+			<input type="button" class="Menu" id="canvasDrawOption" value="Free Draw" onclick ="canvasDraw()"/>
+			<div id="rad">	
+				Line Width: <span id="radiusValue"></span>
+				<div id="decRadius" class ="radiusControl">-
+				</div>
+				<div id="incRadius" class ="radiusControl">+
+				</div>
+			</div>
+		Canvas Colour:
+		<input id="colorCanvas" value="#FFFFFF" type="color" class="Colours" 
+		onchange="canvasColour()"/>
+		</div>
 
 
-<div id="canvasdiv">
-<canvas id="myCanvas" width="800" height="500">
-If you can read this your browser does not support this
-</canvas>
-</div>
-<div id="contentRightSide">
-Text Size:
-<select id="fontSize" class="Menu">
-	<option value="10px">10px</option>
-	<option value="20px">20px</option>
-	<option value="30px">30px</option>
-	<option value="40px">40px</option>
-</select>
-<br>
-Text Font:
-<select id="fontFamily" class="Menu">
-	<option value="Arial">Arial</option>
-	<option value="Impact">Impact</option>
-	<option value="Tahoma">Tahoma</option>
-	<option value="Verdana">Verdana</option>
-</select>
-<br>
-Text Colour:
-<input id="colorText" type="color" class="Colours"/>
-<input type="text" id="titleValue" name="title" class="Menu"/>
-<input type="button" class="Menu" id="titleAdd" name="addTitle" value="Add 
-Text" onclick="addTitle()";/>
-<br>
-Shapes:
-<button type="button" class="Menu" id= "circleAdd" onclick="circle();"> 
-Circle </button>
-<button type="button" class="Menu" id= "rectAdd" onclick="rectangle();"> 
-Rectangle </button>
-<button type="button" class="Menu" id="bubbleAdd" 
-onclick="speechBubble();"> Speech Bubble </button>
+	<div id="canvasdiv">
+	<canvas id="myCanvas" width="800" height="500">
+	If you can read this your browser does not support this
+	</canvas>
+	</div>
+	<div id="contentRightSide">
+	Text Size:
+	<select id="fontSize" class="Menu">
+		<option value="10px">10px</option>
+		<option value="20px">20px</option>
+		<option value="30px">30px</option>
+		<option value="40px">40px</option>
+	</select>
+	<br>
+	Text Font:
+	<select id="fontFamily" class="Menu">
+		<option value="Arial">Arial</option>
+		<option value="Impact">Impact</option>
+		<option value="Tahoma">Tahoma</option>
+		<option value="Verdana">Verdana</option>
+	</select>
+	<br>
+	Text Colour:
+	<input id="colorText" type="color" class="Colours"/>
+	<input type="text" id="titleValue" name="title" class="Menu"/>
+	<input type="button" class="Menu" id="titleAdd" name="addTitle" value="Add 
+	Text" onclick="addTitle()";/>
+	<br>
+	Shapes:
+	<button type="button" class="Menu" id= "circleAdd" onclick="circle();"> 
+	Circle </button>
+	<button type="button" class="Menu" id= "rectAdd" onclick="rectangle();"> 
+	Rectangle </button>
+	<button type="button" class="Menu" id="bubbleAdd" 
+	onclick="speechBubble();"> Speech Bubble </button>
 
-</div>
-</div>
-
-
-<div id="footer">
-
-<div id ="save" class="footerMenu">
-Save
-</div>
-<div id="clear" class="footerMenu">
-Clear Canvas
-</div>
-</div>
-    
-<div id="samples">
-<table> 
-<tr>
-<td><img src="http://www.thewowimages.com/wowimages/funny_animals-6.jpg" 
-id = "Image 1" onclick = "imageSelectorFunc(id)"/> </td>
-</tr>
-<tr>
-<td><img src="http://ichef.bbci.co.uk/images/ic/944x531/p020v5c3.jpg"  id 
-= "Image 2" onclick = "imageSelectorFunc(id)"/></td>
-</tr>
-<tr>
-<td><img 
-src="http://img4.wikia.nocookie.net/__cb20110701192358/en.futurama/images/d/da/Fry_Looking_Squint.jpg" 
-id = "Image 3" onclick = "imageSelectorFunc(id)"/></td>
-</tr>
-<tr>
-<td><img src="http://www.hdwallpapers.in/walls/windows_xp_bliss-wide.jpg" 
-id = "Image 4" onclick = "imageSelectorFunc(id)"/></td>
-</tr>
-<tr>
-<td><img 
-src="http://www.deathandtaxesmag.com/wp-content/uploads/2014/08/Snoop-Dogg-crashed-the-New-York-Times-editors-Reddit-AMA.jpg" 
-id = "Image 5" onclick = "imageSelectorFunc(id)"/></td>
-</tr>
+	</div>
+	</div>
 
 
-</table>
-</div>
-<script src="java.js"></script>
+	<div id="footer">
 
+			<div id ="save" class="footerMenu">
+			Save
+			</div>
+			<div id="clear" class="footerMenu">
+			Clear Canvas
+			</div>
+			</div>
+		
+	<div id="samples">
+	<table> 
+	<tr>
+	<td><img src="http://www.thewowimages.com/wowimages/funny_animals-6.jpg" 
+	id = "Image 1" onclick = "imageSelectorFunc(id)"/> </td>
+	</tr>
+	<tr>
+	<td><img src="http://ichef.bbci.co.uk/images/ic/944x531/p020v5c3.jpg"  id 
+	= "Image 2" onclick = "imageSelectorFunc(id)"/></td>
+	</tr>
+	<tr>
+	<td><img 
+	src="http://img4.wikia.nocookie.net/__cb20110701192358/en.futurama/images/d/da/Fry_Looking_Squint.jpg" 
+	id = "Image 3" onclick = "imageSelectorFunc(id)"/></td>
+	</tr>
+	<tr>
+	<td><img src="http://www.hdwallpapers.in/walls/windows_xp_bliss-wide.jpg" 
+	id = "Image 4" onclick = "imageSelectorFunc(id)"/></td>
+	</tr>
+	<tr>
+	<td><img 
+	src="http://www.deathandtaxesmag.com/wp-content/uploads/2014/08/Snoop-Dogg-crashed-the-New-York-Times-editors-Reddit-AMA.jpg" 
+	id = "Image 5" onclick = "imageSelectorFunc(id)"/></td>
+	</tr>
+
+
+	</table>
 </body>
 </html>
