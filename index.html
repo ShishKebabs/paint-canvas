@@ -8,16 +8,21 @@
 
 <body>
 	<header> 
-		<div id="header">
-			<h1> QuikEdit beta </h1>
+		<div id="top-menu">
+			<div class="top-menu">
+				<input type="button" id="save" value="Save" ></button>
+				<input type="button" id="clear" value="Clear" ></button>
+			</div>
+			<div class ="top-menu">
+				<input type="button" id="upload" value="Upload" onclick="imageUrlFunc()"/></button>
+			</div>
+			<div id = url-div class ="top-menu">
+					<input id = "url" type="url"/>
+			</div>
+
 		</div>
 	</header>
-	<div id="top-bar">
-		<div id="imageUrl">
-			<input id = "url" type="url" class="imageUpload"/>
-			<input type="button" id="upload" value="Upload" onclick="imageUrlFunc()"/></button>
-		</div>
-	</div>
+
 	<div id="main-div">
 		<div id="left-menu">
 			<input type="button" class="Menu" id="canvasDrawOption" value="Free Draw" onclick ="canvasDraw()"/>
@@ -68,15 +73,9 @@
 	</div>
 
 
-	<div id="footer">
+	<div id="footer-div">
 
-			<div id ="save" class="footerMenu">
-			Save
-			</div>
-			<div id="clear" class="footerMenu">
-			Clear Canvas
-			</div>
-			</div>
+	</div>
 		
 	<div id="samples">
 	<table> 
