@@ -4,22 +4,25 @@ h1,h2,h3,h4,h5{
 body
 {
 	background-color: rgb(219, 219, 219);
-    color: rgb(223, 223, 223);
 	margin: 0 auto;
 	padding: 0;
 	font-family: Arial, Helvetica, sans-serif;
+	height: 100vh;
+
 }
-header {
+
+#paint-app-container {
+	display: flex;
+	height: 100%;
+	flex-flow: column;	
+}
+
+#top-menu {
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
 	background-color: rgb(61, 61, 61);
-}
-
-#w {
-	background-color: pink;
-}
-
-.top-menu {
-	display: inline-block;
-	height: 1em;
+	height: 40px;
 }
 
 #url{
@@ -30,30 +33,50 @@ header {
     clear: both;
 }
 
+#main-div{
+	display: flex;
+	align-items: stretch;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	height: 100%;
+	
+}
 
-.Menu {
-    padding: 10px;
-    margin-top: 5px;
-    display: block;
-    width: 90px;
+.main-div-c {
+	border-radius: 2px;
+	max-width: 5%;
+	padding: 0.1em;
+	background-color: rgb(61, 61, 61);
+	display: flex;
+	flex-direction: column;
 }
-#main-div {
-        margin-top: 5px;
-	   border-radius: 5px;
-	   height: 100%;
-        width: 100%;
-	   padding: 10px;
+
+#left-menu {
+	/* width: 200px; */
+	flex-basis: auto;
+
 }
-#left-menu
-{
-    float: left;
+#canvas-div { 
+	flex-grow: 1;
+	text-align: center;
+	margin: auto;
+
+}
+#art-canvas {
+	max-width: 80%;
+	max-height: 80%;
 	background-color: white;
-	border-radius: 5px;
-	width: 10%;
-	padding: 15px;
-    background-color: #4682B4;
+	border: 1px solid black;
+
 }
-.radius-control{
+#right-menu {	
+	/* width: 200px; */
+	flex-basis: auto;
+
+}
+
+.radius-control {
 	width: 30px;
 	height: 30px;
 	padding: 5px;
@@ -61,24 +84,8 @@ header {
 	color: white;
 	display: inline-block;
 }
-#art-canvas {
-    float: left;
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-bottom: 1%;
-	background-color: white;
-    border: 1px solid black;
-}
-#right-menu {	
-    float: left;
-	padding: 10px;
-	background-color: white;
-	border-radius: 5px;
-	height: 500px;
-	width: 10%;
-    background-color: #4682B4;
 
-}
+
 
 
 #footer-div {

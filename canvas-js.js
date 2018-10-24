@@ -1,8 +1,28 @@
 var canvas = document.getElementById('art-canvas');
 var context = canvas.getContext('2d');
 
+var minRadius = 2,
+maxRadius = 30,
+increment = 2,
+// get the elements we want to take input from
+radSpan = document.getElementById('radiusValue'),
+decRad = document.getElementById('decRadius'),
+incRad = document.getElementById('incRadius');
 
-function canvasDraw() { //https://phpacademy.org/topics/html5-canvas-drawing-app/30262 Drawing tool was guided by this article.
+// on click decrease/increase radius by the increment 
+decRadius.addEventListener('click', function(){
+setRadius(radius-increment);
+});
+
+incRadius.addEventListener('click', function(){
+setRadius(radius+increment);
+
+});	
+
+
+
+
+function canvasDraw() { 
 	clearListeners();
 
 	canvas.addEventListener('mousedown', launchDrawing);
@@ -55,24 +75,7 @@ function canvasDraw() { //https://phpacademy.org/topics/html5-canvas-drawing-app
             radSpan.innerHTML = radius;
     }
 	
-    var minRadius = 2,
-        maxRadius = 30,
-        increment = 2,
-		// get the elements we want to take input from
-        radSpan = document.getElementById('radiusValue'),
-        decRad = document.getElementById('decRadius'),
-        incRad = document.getElementById('incRadius');
-	
-		// on click decrease/increase radius by the increment 
-	decRadius.addEventListener('click', function(){
-        setRadius(radius-increment);
-    });
 
-    incRadius.addEventListener('click', function(){
-        setRadius(radius+increment);
-
-    });	
-	
 	
 	function canvasColour () {
 	
@@ -202,5 +205,5 @@ function imageUrlFunc() {
 	  	  
 function imageSelectorFunc (option) {
     var img=document.getElementById(option);
-    context.drawImage(img,0,0,800,500);
+    context.drawImage(img,0,0,7680,4320);
 }

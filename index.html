@@ -7,72 +7,65 @@
 </head>
 
 <body>
-	<header> 
+	<div id=paint-app-container>
 		<div id="top-menu">
-			<div class="top-menu">
+			<div class="top-menu-c">
 				<input type="button" id="save" value="Save" ></button>
 				<input type="button" id="clear" value="Clear" ></button>
-			</div>
-			<div class ="top-menu">
 				<input type="button" id="upload" value="Upload" onclick="imageUrlFunc()"/></button>
+				<input id = "url" type="url"/>
 			</div>
-			<div id = url-div class ="top-menu">
-					<input id = "url" type="url"/>
-			</div>
-
 		</div>
-	</header>
-
-	<div id="main-div">
-		<div id="left-menu">
-			<input type="button" class="Menu" id="canvasDrawOption" value="Free Draw" onclick ="canvasDraw()"/>
-			<div>	
-				Line Width: <span id="radiusValue"></span>
-				<div id="decRadius" class ="radius-control">
-					-
+		<div id="main-div">
+			<div id="left-menu" class = main-div-c>
+				<input type="button" id="canvasDrawOption" value="Free Draw" onclick ="canvasDraw()"/>
+				<div>	
+					Line Width: <span id="radiusValue"></span>
+					<div id="decRadius" class ="radius-control">
+						-
+					</div>
+					<div id="incRadius" class ="radius-control">
+						+
+					</div>
 				</div>
-				<div id="incRadius" class ="radius-control">
-					+
+				<div>	
+					Canvas Colour: <input id="colorCanvas" value="#FFFFFF" type="color" class="Colours" onchange="canvasColour()"/>
 				</div>
 			</div>
-			<div>	
-				Canvas Colour: <input id="colorCanvas" value="#FFFFFF" type="color" class="Colours" onchange="canvasColour()"/>
+			<div id = canvas-div>
+					<canvas width = 2000 height = 1000 id="art-canvas">This browser does not support this.</canvas>
 			</div>
-		</div>
-		<div>
-			<canvas id="art-canvas" width="800" height="500">This browser does not support this.</canvas>
-		</div>
-		<div id="right-menu">
-			Text Size:
-			<select id="fontSize" class="Menu">
-				<option value="10px">10px</option>
-				<option value="20px">20px</option>
-				<option value="30px">30px</option>
-				<option value="40px">40px</option>
-			</select>
-			Text Font:
-			<select id="fontFamily" class="Menu">
-				<option value="Arial">Arial</option>
-				<option value="Impact">Impact</option>
-				<option value="Tahoma">Tahoma</option>
-				<option value="Verdana">Verdana</option>
-			</select>
-			Text Colour:
-			<input id="colorText" type="color" class="Colours"/>
-			<input type="text" id="titleValue" name="title" class="Menu"/>
-			<input type="button" class="Menu" id="titleAdd" name="addTitle" value="Add 
-			Text" onclick="addTitle()";/>
-			Shapes:
-			<button type="button" class="Menu" id= "circleAdd" onclick="circle();"> 
-			Circle </button>
-			<button type="button" class="Menu" id= "rectAdd" onclick="rectangle();"> 
-			Rectangle </button>
-			<button type="button" class="Menu" id="bubbleAdd" 
-			onclick="speechBubble();"> Speech Bubble </button>
+			<div id="right-menu" class = main-div-c>
+				Text Size:
+				<select id="fontSize">
+					<option value="10px">10px</option>
+					<option value="20px">20px</option>
+					<option value="30px">30px</option>
+					<option value="40px">40px</option>
+				</select>
+				Text Font:
+				<select id="fontFamily">
+					<option value="Arial">Arial</option>
+					<option value="Impact">Impact</option>
+					<option value="Tahoma">Tahoma</option>
+					<option value="Verdana">Verdana</option>
+				</select>
+				Text Colour:
+				<input id="colorText" type="color" class="Colours"/>
+				<input type="text" id="titleValue" name="title"/>
+				<input type="button" id="titleAdd" name="addTitle" value="Add 
+				Text" onclick="addTitle()";/>
+				Shapes:
+				<button type="button" id= "circleAdd" onclick="circle();"> 
+				Circle </button>
+				<button type="button" id= "rectAdd" onclick="rectangle();"> 
+				Rectangle </button>
+				<button type="button" id="bubbleAdd" 
+				onclick="speechBubble();"> Speech Bubble </button>
+			</div>
 		</div>
 	</div>
-
-
+<!--
 	<div id="footer-div">
 
 	</div>
@@ -101,6 +94,6 @@
 	src="http://www.deathandtaxesmag.com/wp-content/uploads/2014/08/Snoop-Dogg-crashed-the-New-York-Times-editors-Reddit-AMA.jpg" 
 	id = "Image 5" onclick = "imageSelectorFunc(id)"/></td>
 	</tr>
-	</table>
+	</table>-->
 </body>
 </html>
